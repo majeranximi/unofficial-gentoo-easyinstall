@@ -120,6 +120,13 @@ Have an idea or found a bug? Open an [issue](https://github.com/majeranximi/unof
 
 ## Known issues
 
+- **`sudo` doesn't work after installing release v2026.11.25** ("user is not allowed to run sudo"). Fixed for the
+  next release. To fix it on an installed system, run once:
+  ```bash
+  su -
+  echo '%wheel ALL=(ALL:ALL) ALL' > /etc/sudoers.d/10-wheel && chmod 440 /etc/sudoers.d/10-wheel
+  exit
+  ```
 - Secure Boot is not supported. Disable it in the firmware settings before booting the ISO.
 - The installer offers only the KDE Plasma desktop for now (see the Roadmap).
 

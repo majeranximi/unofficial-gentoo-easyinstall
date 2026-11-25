@@ -45,6 +45,10 @@ passwd -l root
 mkdir -p /etc/sudoers.d
 echo 'gentoo ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/00-live
 chmod 440 /etc/sudoers.d/00-live
+# Installed system: members of wheel (the installer puts the new user there) may use sudo with their password.
+# The Gentoo Calamares config doesn't set sudoersGroup, so without this file sudo is refused after install.
+echo '%wheel ALL=(ALL:ALL) ALL' > /etc/sudoers.d/10-wheel
+chmod 440 /etc/sudoers.d/10-wheel
 
 # --- SDDM autologin into Plasma (Wayland; X11 session stays available in the session menu) ---
 mkdir -p /etc/sddm.conf.d
