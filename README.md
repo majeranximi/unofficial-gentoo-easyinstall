@@ -20,15 +20,14 @@ official Gentoo binhost when a matching binary exists, and are compiled locally 
 
 ## Download
 
-| File | Size | Link |
-|---|---|---|
-| `unofficial-gentoo-easyinstall-kde-YYYYMMDD.iso` | ~3.3 GB | **mega.nz: _link goes here_** |
+**➡️ Get the ISO from the [Releases page](../../releases/latest).**
 
-The ISO is larger than GitHub's 2 GiB release limit, so it is hosted on mega.nz. Check the
-download against the SHA256 published in the release notes:
+Each release links to the ISO (about 3.3 GB) and lists its SHA256 checksum. The ISO is larger than GitHub's 2 GiB
+file limit, so it is hosted on mega.nz instead of being attached to the release. After downloading,
+check that the hash matches the one in the release notes:
 
 ```bash
-sha256sum -c unofficial-gentoo-easyinstall-kde-*.iso.sha256
+sha256sum unofficial-gentoo-easyinstall-kde-*.iso
 ```
 
 ## Requirements
