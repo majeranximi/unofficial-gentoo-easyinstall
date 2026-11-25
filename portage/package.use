@@ -1,0 +1,6 @@
+sys-kernel/installkernel dracut grub
+app-admin/calamares livecd
+sys-boot/grub mount
+dev-libs/boost python
+dev-libs/libpwquality python
+sys-kernel/linux-firmware bindist

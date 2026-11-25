@@ -1,0 +1,8 @@
+# build outputs and the multi-GB build tree; the ISO is published on mega.nz, not in git
+rootfs/
+work/
+dl/
+*.iso
+*.iso.sha256
+*.log
+vm-test/
