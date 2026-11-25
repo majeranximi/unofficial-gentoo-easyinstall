@@ -1,6 +1,6 @@
 # Unofficial Gentoo EasyInstall (KDE)
 
-## We made Gentoo easier to larp! 🐧
+## We made Gentoo easier to larp!
 
 You always wanted to say *"I use Gentoo, btw"*, but the Handbook, three days of `emerge` and a kernel config
 with 14,000 options got in the way. That's what this ISO is for.
