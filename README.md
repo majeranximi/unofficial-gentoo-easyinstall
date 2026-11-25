@@ -121,7 +121,6 @@ Have an idea or found a bug? Open an [issue](https://github.com/majeranximi/unof
 ## Known issues
 
 - Secure Boot is not supported. Disable it in the firmware settings before booting the ISO.
-- VirtualBox Guest Additions are not included, so there is no shared clipboard or drag and drop. Display resizing works.
 - The installer offers only the KDE Plasma desktop for now (see the Roadmap).
 
 ## Building the ISO yourself (optional, for developers)
