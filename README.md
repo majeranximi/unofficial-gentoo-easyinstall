@@ -1,6 +1,18 @@
 # Unofficial Gentoo EasyInstall (KDE)
 
-**A live ISO that installs a ready-to-use Gentoo Linux with KDE Plasma in a few minutes, using a graphical installer. You don't have to compile anything.**
+## We made Gentoo easier to larp! 🐧
+
+You always wanted to say *"I use Gentoo, btw"*, but the Handbook, three days of `emerge` and a kernel config
+with 14,000 options got in the way. That's what this ISO is for.
+
+**Unofficial Gentoo EasyInstall** is a live ISO that installs a ready-to-use Gentoo Linux with the KDE Plasma
+desktop in a few minutes, using a normal graphical installer. You download it, write it to a USB stick and boot it,
+the same way you would with Fedora or Ubuntu. Nothing is compiled during the install, the whole system is already
+on the ISO, and you don't even need an internet connection.
+
+What you end up with is **real Gentoo**, not a Gentoo-flavoured fork. It has Portage, `emerge`, USE flags, OpenRC
+and the official Gentoo repository. You skip the hard part and keep all of that. If you later want to recompile the
+world with `-march=native`, you can.
 
 > ⚠️ **This is an unofficial project.** It is not made, endorsed or supported by Gentoo Linux or the
 > Gentoo Foundation. "Gentoo" is a trademark of the Gentoo Foundation, Inc. Report problems with this ISO
@@ -68,11 +80,49 @@ Gentoo stage3 `desktop-openrc` plus the `default/linux/amd64/23.0/desktop/plasma
 
 Exact package versions are in [`portage/manifest.txt`](portage/manifest.txt).
 
+## Features
+
+- **Graphical installer.** Calamares walks you through language, time zone, keyboard, partitioning and user
+  account. Your time zone is detected automatically when you're online.
+- **Your language, your keyboard.** The language, date/number formats and keyboard layout you pick are applied
+  everywhere: the console, the Plasma desktop and the login screen. Typing a password with `ä`, `ł` or `é` works.
+- **BIOS and UEFI.** The ISO boots on both and sets up GRUB for whichever your machine uses.
+- **No need to unplug the USB stick.** When the ISO finds an installed system, its menu boots that system
+  from disk by default.
+- **Binary packages.** The installed system is set up to use the official Gentoo binhost, so most updates
+  download prebuilt packages instead of compiling them.
+- **A clean Gentoo underneath.** `make.conf` only has sensible defaults and the live-session leftovers are
+  removed during the install.
+
+## After installing
+
+Update the system the Gentoo way. Most packages arrive as prebuilt binaries:
+
+```bash
+sudo emerge --sync
+sudo emerge -avuDN @world
+```
+
+Install more software with `emerge` (for example `sudo emerge -av libreoffice-bin vlc`). If you're new to Gentoo,
+the [Gentoo Wiki](https://wiki.gentoo.org/) is the best place to learn how Portage, USE flags and OpenRC work.
+
+## Roadmap
+
+Ideas for future releases. Nothing here is promised yet:
+
+- 🪟 **More desktop environments to choose from**, such as **Hyprland**, GNOME, Xfce and maybe a minimal/no-desktop
+  edition
+- 🔒 Secure Boot support
+- 🧰 VirtualBox / QEMU guest tools out of the box
+- 💾 Optional swap or zram in the installer
+
+Have an idea or found a bug? Open an [issue](https://github.com/majeranximi/unofficial-gentoo-easyinstall/issues).
+
 ## Known issues
 
 - Secure Boot is not supported. Disable it in the firmware settings before booting the ISO.
 - VirtualBox Guest Additions are not included, so there is no shared clipboard or drag and drop. Display resizing works.
-- The installer offers only the KDE Plasma desktop.
+- The installer offers only the KDE Plasma desktop for now (see the Roadmap).
 
 ## Building the ISO yourself (optional, for developers)
 
