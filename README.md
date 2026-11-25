@@ -20,7 +20,7 @@ official Gentoo binhost when a matching binary exists, and are compiled locally 
 
 ## Download
 
-**➡️ Get the ISO from the [Releases page](../../releases/latest).**
+**➡️ Get the ISO from the [Releases page](https://github.com/majeranximi/unofficial-gentoo-easyinstall/releases/latest).**
 
 Each release links to the ISO (about 3.3 GB) and lists its SHA256 checksum. The ISO is larger than GitHub's 2 GiB
 file limit, so it is hosted on mega.nz instead of being attached to the release. After downloading,
